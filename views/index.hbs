@@ -1,0 +1,27 @@
+<div style="margin-top:50px;">
+    {{#each articleList}}
+    <div class="media" style="border-bottom: 1px solid #ccc;">
+        <div class="media-left">
+            <a href="{{href}}">
+                <img src="{{avatar}}" class="" width="64" height="64" alt="" />
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">
+                <a href="{{href}}">{{title}}</a>
+            </h4>
+            <p class="card-text">作者：{{author}}</p>
+            <p class="card-text">发布时间: {{pubDate}}</p>
+            <p class="card-text">回复数量: {{replyNumber}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<nav>
+    <ul class="pager">
+        <li><a href="/home/{{prev}}" class="btn {{#compare prev 0 }}disabled{{/compare}}">上一页</a></li>
+
+        <li><a href=" /home/{{next}}" class="btn {{#compare next 30 }}disabled{{/compare}}">下一页</a></li>
+    </ul>
+</nav>
