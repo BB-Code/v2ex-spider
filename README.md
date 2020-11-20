@@ -18,4 +18,4 @@ module.exports = {
 
 # 运行截图
 
-![截图](/images/Gif.gif)
+![截图](https://github.com/BB-Code/v2ex-spider/blob/master/images/GIF.gif)
