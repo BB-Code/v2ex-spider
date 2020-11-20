@@ -18,5 +18,4 @@ module.exports = {
 
 # 运行截图
 
-![截图](/images/Gif.gif)
-![截图二](/images/iPhone6.png)
+![截图](https://imgchr.com/i/DQuXVK)
