@@ -12,11 +12,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sentry/node": "^5.27.4",
+    "@sentry/tracing": "^5.27.4",
     "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
+    "puppeteer": "^5.5.0",
     "request": "^2.88.2",
+    "rimraf": "^3.0.2",
     "superagent": "^6.1.0"
   }
 }

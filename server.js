@@ -2,6 +2,29 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 var exphbs = require('express-handlebars');
+const Sentry = require("@sentry/node");
+const Tracing = require("@sentry/tracing");
+
+Sentry.init({
+    dsn: "https://25813ad4752b447eba7fa24870254191@o427468.ingest.sentry.io/5525131",
+    tracesSampleRate: 1.0,
+});
+
+const transaction = Sentry.startTransaction({
+    op: "test",
+    name: "My First Test Transaction",
+});
+
+setTimeout(() => {
+    try {
+        test();
+    } catch (e) {
+        Sentry.captureException(e);
+    } finally {
+        transaction.finish();
+    }
+}, 1000);
+
 const app = express();
 
 
